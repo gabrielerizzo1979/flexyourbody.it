@@ -1,0 +1,81 @@
+.up-sells.products,
+.related.products,
+.cross-sells {
+    clear: both;
+    margin-top: $rem-spacing-3xl;
+
+    > h2 {
+        @include h3();
+        position: relative;
+
+        @include eq-mobile {
+            margin-bottom: $rem-spacing-xl;
+        }
+
+        @include at-tablet {
+            margin-bottom: $rem-spacing-l;
+        }
+    }
+
+    ul.products {
+        position: relative;
+        border-top: 0px;
+        width: 100%;
+        z-index: 1;
+        margin: 0;
+        display: grid;
+        width: 100%;
+        column-gap: $px-spacing-l;
+        row-gap: $px-spacing-xl;
+        @mixin grid-columns($columns) {
+            grid-template-columns: repeat($columns, 1fr);
+        }
+
+        @include grid-columns(1);
+
+        @media (min-width: 370px) and (max-width: #{$tablet-portrait - 1}) {
+            @include grid-columns(2);
+        }
+
+        @for $i from 2 through 5 {
+            &.columns-#{$i} {
+                @if $i == 5 {
+                    @include eq-tablet {
+                        @include grid-columns(2);
+                    }
+                    @media (min-width: #{$tablet-landscape + 1}) {
+                        @include grid-columns(4);
+                    }
+                    @media (min-width: 1400px) {
+                        @include grid-columns(5);
+                    }
+                } @else {
+                    @include at-tablet {
+                        @include grid-columns(min($i, 3));
+                    }
+                    @if $i == 4 {
+                        @include at-desktop {
+                            @include grid-columns(4);
+                        }
+                    }
+                }
+            }
+        }
+
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            display: none;
+        }
+
+        li.product {
+            float: unset;
+            width: 100%;
+            position: relative;
+            margin-bottom: 0 !important;
+            @extend %lyt-product-card-1;
+        }
+    }
+}

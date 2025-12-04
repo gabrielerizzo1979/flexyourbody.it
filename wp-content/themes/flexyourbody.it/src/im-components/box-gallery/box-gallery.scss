@@ -1,0 +1,66 @@
+.im-gallery {
+    &__media {
+        position: relative;
+        cursor: pointer;
+        background-color: $black;
+
+        picture {
+            position: relative;
+            display: block;
+            @include size(100%);
+            z-index: 1;
+
+            img {
+                display: block;
+                @include size(100%);
+            }
+        }
+
+        @include eq-mobile {
+            picture {
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+        @include at-tablet {
+            picture {
+                aspect-ratio: 1.777777;
+                transition: opacity $timeMedium $easeQuadInOut;
+            }
+
+            &:hover {
+                picture {
+                    opacity: 0.6;
+                }
+
+                .im-gallery__icon {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        @include size(50px);
+        padding: 13px;
+        border-radius: 25px;
+        background-color: $line;
+        z-index: 2;
+
+        svg {
+            display: block;
+            @include size(24px);
+        }
+
+        @include eq-mobile {
+            @include centerX();
+            bottom: 20px;
+        }
+
+        @include at-tablet {
+            @include center();
+            opacity: 0;
+            transition: opacity $timeMedium $easeQuadInOut;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+.im-image {
+    position: relative;
+
+    &__wrapper {
+        @include at-tablet {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+    }
+
+    &__media {
+        @include eq-mobile {
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
+
+        @include at-tablet {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        picture,
+        img {
+            display: block;
+        }
+    }
+
+    //IMMAGINE SINGOLA
+    &.single {
+        .im-image__media {
+            img {
+                width: 100%;
+                height: auto;
+
+                @include eq-mobile {
+                    aspect-ratio: 1 / 1;
+                }
+
+                @include at-tablet {
+                    aspect-ratio: 2.066666;
+                }
+            }
+        }
+    }
+
+    //DUE IMMAGINI
+    &.double {
+        .im-image__media {
+            img {
+                width: 100%;
+                height: auto;
+
+                @include eq-mobile {
+                    aspect-ratio: 1 / 1;
+                }
+
+                @include at-tablet {
+                    aspect-ratio: 1 / 1;
+                }
+            }
+        }
+    }
+
+    &.triple {
+        .im-image__media {
+            img {
+                width: 100%;
+                height: auto;
+
+                @include eq-mobile {
+                    aspect-ratio: 1 / 1;
+                }
+
+                @include at-tablet {
+                    aspect-ratio: 0.65;
+                }
+            }
+        }
+    }
+
+    &.composed {
+        .im-image__media {
+            @include at-tablet {
+                picture {
+                    @include size(100%);
+                }
+            }
+            &.big {
+                img {
+                    width: 100%;
+                    height: auto;
+
+                    @include eq-mobile {
+                        aspect-ratio: 1 / 1;
+                    }
+
+                    @include at-tablet {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+            &.small {
+                img {
+                    width: 100%;
+                    height: auto;
+
+                    @include eq-mobile {
+                        aspect-ratio: 1 / 1;
+                    }
+
+                    @include at-tablet {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

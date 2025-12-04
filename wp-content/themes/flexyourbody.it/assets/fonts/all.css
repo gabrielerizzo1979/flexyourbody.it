@@ -1,0 +1,41 @@
+/**** INTER ****/
+
+/* fallback */
+@font-face {
+    font-family: 'Inter-fallback';
+    size-adjust: 107%;
+    ascent-override: 91%;
+    src: local('Arial');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url('https://static.cdn-immedia.net/fonts/google/inter/inter-400.woff2')
+        format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-weight: 500;
+    src: url('https://static.cdn-immedia.net/fonts/google/inter/inter-500.woff2')
+        format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-weight: 600;
+    src: url('https://static.cdn-immedia.net/fonts/google/inter/inter-600.woff2')
+        format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-weight: 700;
+    src: url('https://static.cdn-immedia.net/fonts/google/inter/inter-700.woff2')
+        format('woff2');
+}

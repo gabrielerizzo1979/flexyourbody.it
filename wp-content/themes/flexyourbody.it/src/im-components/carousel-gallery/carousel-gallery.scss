@@ -1,0 +1,76 @@
+.im-carousel-gallery {
+    &__container {
+    }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__media {
+        position: relative;
+        cursor: pointer;
+
+        picture {
+            position: relative;
+            display: block;
+            z-index: 1;
+            aspect-ratio: 1;
+
+            img {
+                @include size(100%);
+                object-fit: cover;
+                transition: filter 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+            }
+        }
+
+        @include at-tablet {
+            &:hover {
+                img {
+                    -webkit-filter: brightness(80%);
+                    filter: brightness(80%);
+                }
+
+                .im-carousel-gallery__icon {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+        @include eq-mobile {
+            background-color: $white;
+            @include size(33px);
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+        }
+
+        @include at-tablet {
+            background-color: #ffffff88;
+            @include size(48px);
+            @include center();
+            opacity: 0;
+            border-radius: 50%;
+            transition: opacity $timeMedium $easeQuadInOut;
+        }
+
+        svg {
+            display: block;
+            fill: $primary;
+
+            @include eq-mobile {
+                @include size(14px);
+            }
+
+            @include at-tablet {
+                @include size(18px);
+            }
+        }
+    }
+}

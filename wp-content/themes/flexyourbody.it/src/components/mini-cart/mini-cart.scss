@@ -1,0 +1,112 @@
+// COMPONENTE MINI CART
+//--------------------------------------------------------------------//
+
+.wc-block-mini-cart__drawer {
+    color: $wc-black;
+    font-family: $font-family-wc;
+
+    p {
+        @extend %wc-p;
+    }
+
+    .wc-block-components-drawer__close {
+        cursor: pointer;
+    }
+
+    .wc-block-components-button:not(.is-link):not(
+            .wc-block-components-drawer__close
+        ) {
+        @extend %wc-btn;
+    }
+
+    .wc-block-mini-cart__empty-cart-wrapper {
+        text-align: center;
+
+        > p {
+            @extend %wc-h4;
+
+            &.cms-custom-style {
+                padding: 0;
+                max-width: unset;
+            }
+        }
+
+        .wp-block-button {
+            max-width: unset;
+            padding: 0;
+        }
+
+        .wc-block-components-button:not(.is-link) {
+            @extend %wc-btn-black;
+            margin-top: $rem-spacing-l;
+            padding: clamp(10px, 8.571px + 0.446vw, 15px)
+                clamp(20px, 17.143px + 0.893vw, 30px) !important;
+        }
+    }
+
+    .wc-block-mini-cart__title {
+        @extend %wc-h4;
+
+        @include pre-desktop {
+            margin: $px-basic-int-s-padding $px-basic-int-s-padding -24px;
+        }
+
+        @include at-desktop {
+            margin: $px-basic-int-s-padding $px-basic-int-s-padding -32px;
+        }
+    }
+
+    .wp-block-woocommerce-filled-mini-cart-contents-block {
+        .wc-block-mini-cart__items {
+            padding-left: $px-basic-int-s-padding;
+            padding-right: $px-basic-int-s-padding;
+
+            .wc-block-cart-items {
+                tr.wc-block-cart-items__row {
+                    @extend %mini-card-product;
+                    @extend %mini-card-product--small;
+                }
+            }
+        }
+
+        .wc-block-mini-cart__footer {
+            padding: $px-basic-int-s-padding;
+
+            &-subtotal {
+                .wc-block-components-totals-item__label {
+                    @extend %wc-h4;
+                }
+
+                .wc-block-components-totals-item__value {
+                    @extend %wc-h4;
+                }
+
+                .wc-block-components-totals-item__description {
+                    padding-top: $rem-spacing-xs;
+                }
+            }
+
+            &-actions {
+                flex-wrap: wrap;
+
+                .wc-block-components-button:not(.is-link) {
+                    &.outlined {
+                        @extend %wc-btn-black-outline;
+                        @extend %wc-btn-small;
+
+                        &:not(:focus) {
+                            box-shadow: none;
+                        }
+                    }
+
+                    &.contained {
+                        @extend %wc-btn-black;
+                        @extend %wc-btn-small;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------------------//

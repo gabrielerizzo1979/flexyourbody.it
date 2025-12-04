@@ -1,0 +1,95 @@
+// COMPONENTE Accordion
+//--------------------------------------------------------------------//
+
+.im-accordion {
+    &__toggle {
+        cursor: pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &.open {
+            .im-accordion__icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__icon {
+        position: relative;
+        transform: none;
+        border: 1px solid $primary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include size(28px);
+        aspect-ratio: 1;
+        transition: transform $timeMedium $easeCubicInOut;
+
+        svg {
+            display: block;
+            fill: $primary;
+            @include size(10px);
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        transition: height $timeMedium $easeCubicInOut;
+        &:not(.open) {
+            height: 0px;
+        }
+
+        > [data-wrapper-height] {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transform: translateY(30px);
+            transition-duration: 0.75s;
+            opacity: 0;
+
+            ul {
+                list-style-type: circle;
+                padding: rem(10) 0 0 rem(20);
+
+                li {
+                    padding: 0;
+
+                    &:not(:last-child) {
+                        padding-bottom: rem(10);
+                    }
+                }
+
+                &:not(:last-child) {
+                    padding-bottom: rem(10);
+                }
+            }
+
+            ol {
+                list-style-type: decimal;
+                padding: rem(10) 0 0 rem(20);
+
+                li {
+                    padding: 0;
+
+                    &:not(:last-child) {
+                        padding-bottom: rem(10);
+                    }
+                }
+
+                &:not(:last-child) {
+                    padding-bottom: rem(10);
+                }
+            }
+        }
+
+        &.open {
+            > [data-wrapper-height] {
+                opacity: 1;
+                transform: translateY(0px);
+                transition-delay: 0.15s;
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------------------//

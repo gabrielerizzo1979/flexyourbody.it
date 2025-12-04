@@ -1,0 +1,164 @@
+// COMPONENTE MODAL COOKIE
+//--------------------------------------------------------------------//
+
+.im-modal-cookie__open {
+    cursor: pointer;
+}
+
+.im-modal-cookie {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    top: 0px;
+    left: 0px;
+    @include size(100%);
+    z-index: 99999;
+    // transition: visibility 0s linear $timeFast, opacity $timeFast ease-in-out;
+
+    &.open {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: visibility 0s linear, opacity $timeFast ease-in-out;
+    }
+
+    &.close {
+        transition: visibility 0s linear $timeFast,
+            opacity $timeFast ease-in-out;
+    }
+
+    &__background {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        @include size(100%);
+        background-color: rgba($black, 0.8);
+        z-index: 1;
+    }
+
+    &__container {
+        position: relative;
+        @include center();
+        background-color: $white;
+        max-height: 100%;
+        overflow-y: auto;
+        z-index: 2;
+
+        @include eq-mobile {
+            @include size(88%, auto);
+        }
+
+        @include eq-tablet {
+            @include size(720px, auto);
+        }
+
+        @include at-desktop {
+            @include size(768px, auto);
+        }
+    }
+
+    &__content {
+        @include eq-mobile {
+            padding: $px-spacing-3xl-m $px-spacing-base;
+        }
+
+        @include at-tablet {
+            padding: $px-spacing-xl-d $px-spacing-base;
+        }
+
+        @include at-desktop {
+            padding: $px-spacing-xl-d;
+        }
+
+        video,
+        picture,
+        iframe {
+            width: 100%;
+            height: auto;
+        }
+
+        > * {
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__subtitle {
+        margin-top: $rem-spacing-s;
+    }
+
+    &__p {
+        margin-top: $rem-spacing-l;
+    }
+
+    &__close {
+        cursor: pointer;
+        position: absolute;
+        padding: 2px;
+        z-index: 2;
+
+        @include eq-mobile {
+            top: 10px;
+            right: 10px;
+        }
+
+        @include at-tablet {
+            top: 18px;
+            right: 18px;
+        }
+
+        svg {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            vertical-align: middle;
+        }
+    }
+
+    &__cta {
+        margin-top: $rem-spacing-l;
+    }
+
+    &__img-wrap {
+        margin-top: $rem-spacing-l;
+        width: 100%;
+
+        picture {
+            @include size(100%);
+
+            img {
+                @include size(100%);
+                object-fit: cover;
+            }
+        }
+    }
+
+    //modale fullscreen
+    &.full {
+        .im-modal-cookie__container {
+            @include size(100%, auto);
+            max-width: unset;
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .im-modal-cookie__content {
+            position: relative;
+            padding: 0;
+            z-index: 1;
+
+            video,
+            iframe {
+                max-width: 100vw;
+                max-height: 100vh;
+            }
+        }
+
+        .im-modal-cookie__close {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+//--------------------------------------------------------------------//

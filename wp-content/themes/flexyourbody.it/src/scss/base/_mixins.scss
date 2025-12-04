@@ -1,0 +1,228 @@
+//##########################################//
+//                                          //
+//         MIXINS PER FUNZIONI CSS          //
+//                                          //
+//##########################################//
+
+// Mixin for setting both width and height of an element
+// @param $width: The width size.
+// @param $height: The height size @default same of $width.
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// Mixin for setting both max-width and max-height of an element
+// @param $width: The max-width size.
+// @param $height: The max-height size @default same of $width.
+@mixin max-size($width, $height: $width) {
+    max-width: $width;
+    max-height: $height;
+}
+
+// Mixin for setting both min-width and hmin-eight of an element
+// @param $width: The min-width size.
+// @param $height: The min-height size @default same of $width.
+@mixin min-size($width, $height: $width) {
+    min-width: $width;
+    min-height: $height;
+}
+
+@mixin stretch(
+    $offset-top: 0,
+    $offset-right: 0,
+    $offset-bottom: 0,
+    $offset-left: 0
+) {
+    position: absolute;
+    @if $offset-top {
+        top: $offset-top;
+    }
+    @if $offset-bottom {
+        bottom: $offset-bottom;
+    }
+    @if $offset-left {
+        left: $offset-left;
+    }
+    @if $offset-right {
+        right: $offset-right;
+    }
+}
+
+// Mixin to center things with position and transform properties
+// @param $reset: Get the initial behaviour
+@mixin center($reset: false) {
+    @if $reset {
+        @include stretch(initial, initial, initial, initial);
+        transform: translate(0, 0);
+        position: static;
+    } @else {
+        @include stretch(50%, initial, initial, 50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+// Mixin for centering horizontally
+// @param $reset: Get the initial behaviour
+@mixin centerX($reset: false) {
+    @if $reset {
+        transform: translateX(0);
+        position: static;
+        left: initial;
+        right: initial;
+    } @else {
+        @include stretch(initial, initial, initial, 50%);
+        transform: translateX(-50%);
+    }
+}
+
+// Mixin for centering vertically
+// @param $reset: Get the initial behaviour
+@mixin centerY($reset: false) {
+    @if $reset {
+        transform: translateY(0);
+        position: static;
+        top: initial;
+        bottom: initial;
+    } @else {
+        @include stretch(50%, initial, initial, initial);
+        transform: translateY(-50%);
+    }
+}
+
+// --------------------------------------------------
+// Flexbox SASS mixins
+// --------------------------------------------------
+
+// Flexbox display
+@mixin flexbox() {
+    display: flex;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+@mixin flex($values) {
+    flex: $values;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+    flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+    flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow($flow) {
+    flex-flow: $flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+@mixin order($val) {
+    order: $val;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+@mixin flex-grow($grow) {
+    flex-grow: $grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+@mixin flex-shrink($shrink) {
+    flex-shrink: $shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width>
+@mixin flex-basis($width) {
+    flex-basis: $width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+    justify-content: $justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin align-content($align) {
+    align-content: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+    align-items: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+@mixin align-self($align) {
+    align-self: $align;
+}
+
+// --------------------------------------------------
+// PX to EM mixins
+// --------------------------------------------------
+$browser-context: 16;
+
+@function em($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return calc($pixels / $context * 1em);
+}
+
+// --------------------------------------------------
+// PX to REM mixins
+// --------------------------------------------------
+
+// HTML: FONT-SIZE = 16;
+$html-context: 16;
+
+@function rem($target, $context: $html-context) {
+    @return calc($target / $context * 1rem);
+}
+
+// --------------------------------------------------
+// Box Shadow mixins
+// --------------------------------------------------
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: inset $top $left $blur $spread $color;
+        -moz-box-shadow: inset $top $left $blur $spread $color;
+        box-shadow: inset $top $left $blur $spread $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $spread $color;
+        -moz-box-shadow: $top $left $blur $spread $color;
+        box-shadow: $top $left $blur $spread $color;
+    }
+}

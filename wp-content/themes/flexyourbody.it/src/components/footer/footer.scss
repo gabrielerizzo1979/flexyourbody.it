@@ -1,0 +1,187 @@
+// COMPONENTE FOOTER
+//--------------------------------------------------------------------//
+
+body.single-post {
+    .footer {
+        margin-top: $rem-spacing-3xl;
+    }
+}
+
+.footer {
+    position: relative;
+
+    &__container {
+        display: flex;
+        width: 100%;
+        max-width: 120rem;
+        margin: 0px auto;
+        gap: $px-spacing-l;
+
+        @include pre-desktop {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @include at-desktop {
+            justify-content: space-between;
+            gap: $px-spacing-xl-d;
+        }
+    }
+
+    &__top {
+        .footer__container {
+            padding: $rem-spacing-xxl $px-spacing-base;
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+
+        @include pre-desktop {
+            align-items: center;
+            gap: $rem-spacing-l;
+        }
+
+        @include at-desktop {
+            gap: $px-spacing-l;
+            align-items: flex-start;
+        }
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__first-col {
+        .logo {
+            display: block;
+            text-decoration: none;
+
+            img {
+                width: 200px;
+                width: 80px;
+                height: auto;
+            }
+        }
+    }
+
+    &__second-col,
+    &__third-col {
+        ul {
+            display: flex;
+            gap: $rem-spacing-s;
+            flex-direction: column;
+        }
+    }
+
+    &__fourth-col {
+        @include at-desktop {
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .socials {
+            ul {
+                display: flex;
+
+                @include pre-desktop {
+                    gap: 6px;
+                    justify-content: center;
+                }
+
+                @include at-tablet {
+                    gap: $px-spacing-m;
+                }
+
+                li {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        @include size(30px);
+                        background-color: $primary;
+                        border-radius: 100%;
+                        border: 1px solid $primary;
+                        transition: background-color 0.2s
+                            cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
+                        @include pre-desktop {
+                            text-align: center;
+                        }
+
+                        svg {
+                            @include size(16px);
+                            fill: $white;
+                        }
+
+                        &:hover {
+                            background-color: transparent;
+
+                            svg {
+                                fill: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .credits {
+            @include pre-desktop {
+                text-align: center;
+            }
+
+            a {
+                display: inline-block;
+
+                svg {
+                    @include size(56px, auto);
+                    fill: currentColor;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        .footer__container {
+            @include pre-desktop {
+                padding: $rem-spacing-s $px-spacing-base;
+            }
+
+            @include at-desktop {
+                align-items: center;
+                padding: $rem-spacing-s $px-spacing-base;
+            }
+        }
+
+        button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            border: 0;
+            border-radius: 0;
+            padding: 0;
+            background: transparent;
+            text-decoration: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            color: currentColor;
+            gap: $px-spacing-s;
+            @include p();
+        }
+    }
+
+    .footer__payments {
+        img {
+            @include size(200px, auto);
+        }
+    }
+}
+
+//--------------------------------------------------------------------//

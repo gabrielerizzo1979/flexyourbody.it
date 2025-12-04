@@ -1,0 +1,12 @@
+{
+    "name": "acf/box-image",
+    "title": "Immagine - box-image",
+    "description": "Immagine - box-image",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["box", "image"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/box-image/box-image.php"
+    }
+}

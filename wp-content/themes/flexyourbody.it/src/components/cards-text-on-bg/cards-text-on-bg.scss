@@ -1,0 +1,165 @@
+// COMPONENTE CARDS TEXT ON BG
+//--------------------------------------------------------------------//
+.cards-text-on-bg {
+    &.s-height {
+    }
+
+    &.m-height {
+        .card-text-on-bg__text-wrap {
+            @include eq-mobile {
+                min-height: 360px;
+            }
+
+            @include eq-tablet {
+                min-height: 400px;
+            }
+
+            @include at-desktop {
+                min-height: 460px;
+            }
+        }
+    }
+
+    &.l-height {
+        .card-text-on-bg__text-wrap {
+            @include eq-mobile {
+                min-height: 360px;
+            }
+
+            @include eq-tablet {
+                min-height: 400px;
+            }
+
+            @include at-desktop {
+                min-height: 600px;
+            }
+        }
+    }
+
+    &__container {
+    }
+
+    &__wrap {
+        display: flex;
+        gap: $px-spacing-l;
+
+        @include pre-desktop {
+            flex-direction: column;
+        }
+    }
+
+    .card-text-on-bg {
+        text-decoration: none;
+        width: 100%;
+        overflow: hidden;
+        background-color: $dark;
+
+        &.bottom-left {
+            .card-text-on-bg__text-wrap {
+                align-items: flex-end;
+            }
+        }
+
+        &.bottom-center {
+            .card-text-on-bg__text-wrap {
+                align-items: flex-end;
+                justify-content: center;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+
+        &.center {
+            .card-text-on-bg__text-wrap {
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+
+        &.padding-int-s {
+            .card-text-on-bg__text-wrap {
+                padding: $px-spacing-l;
+            }
+        }
+
+        &.padding-int-m {
+            .card-text-on-bg__text-wrap {
+                padding: $px-spacing-xl;
+            }
+        }
+
+        &.padding-int-l {
+            .card-text-on-bg__text-wrap {
+                padding: $px-spacing-base;
+            }
+        }
+
+        &__container {
+            position: relative;
+            height: 100%;
+        }
+
+        &__img-wrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include size(100%);
+
+            picture {
+                position: relative;
+                @include size(100%);
+
+                &::after {
+                    content: '';
+                    background-color: hsla(0, 0%, 0%, 0.6);
+                    z-index: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include size(100%);
+                    transition: background-color 0.2s
+                        cubic-bezier(0.55, 0.085, 0.68, 0.53);
+                }
+
+                img {
+                    position: absolute;
+                    @include size(100%);
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &__text-wrap {
+            position: relative;
+            z-index: 2;
+            color: $white;
+            display: flex;
+            height: 100%;
+        }
+
+        &__text-content {
+            width: 100%;
+            max-width: rem(640);
+
+            p {
+                margin-top: $rem-spacing-s;
+            }
+
+            span {
+                margin-top: $rem-spacing-l;
+            }
+
+            > *:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    a.card-text-on-bg {
+        @extend %parent-btn-white-outline;
+    }
+}
+
+//--------------------------------------------------------------------//

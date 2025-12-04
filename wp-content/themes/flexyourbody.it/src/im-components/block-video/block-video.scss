@@ -1,0 +1,45 @@
+.im-block-video 
+{
+    &__container
+    {
+        position: relative;
+    }
+
+    &__media 
+    {
+        video,
+        picture
+        {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__button-play, 
+    &__button-modal 
+    {
+        @include center();
+        @include size(48px, 48px);
+        opacity: 1;
+        visibility: visible;
+        transition: visibility $timeFast ease-in-out, opacity $timeFast ease-in-out;
+        cursor: pointer;
+
+        &.hide 
+        {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .icon-play 
+        {
+            @include center();
+            width: 100%;
+            height: auto;
+        }
+        
+
+        
+    }
+}

@@ -1,0 +1,26 @@
+//##################################//
+//                                  //
+//       ANIMAZIONI DEL SITO        //
+//                                  //
+//##################################//
+
+//--- TEMPORIZZAZIONI --------------------------------------------------------//
+
+$timeSlow: 1s;
+$timeMedium: 0.5s;
+$timeFast: 0.2s;
+
+//--- EASE -------------------------------------------------------------------//
+
+$easeQuadIn: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeQuadInOut: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeQuadOut: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+$easeCubicIn: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeCubicInOut: cubic-bezier(0.645, 0.045, 0.355, 1);
+$easeCubicOut: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$easeQuintIn: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeQuintInOut: cubic-bezier(0.23, 1, 0.32, 1);
+$easeQuintOut: cubic-bezier(0.86, 0, 0.07, 1);
+

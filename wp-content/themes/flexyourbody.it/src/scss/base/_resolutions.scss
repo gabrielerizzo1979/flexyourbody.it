@@ -1,0 +1,82 @@
+//##########################################//
+//                                          //
+//        RESOLUTIONS E MEDIA QUERY         //
+//                                          //
+//##########################################//
+
+// ##########  VARIABILI  #############################################
+
+$mobile: 0px;
+$tablet-portrait: 768px;
+$tablet-landscape: 1024px;
+$desktop-extended: 1441px;
+
+// ##########  MEDIA QUERY  #############################################
+
+// Mobile
+//--------------------------------------------------------------------//
+
+@mixin eq-mobile {
+    @media (max-width: #{$tablet-portrait - 1}) {
+        @content;
+    }
+}
+
+// Tablet
+//--------------------------------------------------------------------//
+
+@mixin at-tablet {
+    @media (min-width: $tablet-portrait) {
+        @content;
+    }
+}
+
+@mixin eq-tablet {
+    @media (min-width: $tablet-portrait) and (max-width: $tablet-landscape) {
+        @content;
+    }
+}
+
+// Tablet and Mobile
+//--------------------------------------------------------------------//
+@mixin pre-desktop {
+    @media (max-width: $tablet-landscape) {
+        @content;
+    }
+}
+
+// Desktop
+//--------------------------------------------------------------------//
+
+@mixin at-desktop {
+    @media (min-width: #{$tablet-landscape + 1}) {
+        @content;
+    }
+}
+
+@mixin eq-desktop {
+    @media (min-width: #{$tablet-landscape + 1}) and
+            (max-width: #{$desktop-extended - 1}) {
+        @content;
+    }
+}
+
+@mixin extend-desktop {
+    @media (min-width: $desktop-extended) {
+        @content;
+    }
+}
+
+// Breakpont personalizzati per la Navbar
+//--------------------------------------------------------------------//
+@mixin nav-expanded {
+    @media (min-width: 1351px) {
+        @content;
+    }
+}
+
+@mixin nav-compressed {
+    @media (max-width: 1350px) {
+        @content;
+    }
+}

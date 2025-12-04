@@ -1,0 +1,16 @@
+/*
+*
+* CUSTOM WOOCOMMERCE CSS FOR ADMIN AREA (Backend WP)
+*
+*/
+
+
+#order_data .order_data_column .order_data_column
+{
+    width: 100%;
+}
+
+#order_data .order_data_column ._billing_codice_fiscale_field
+{
+    width: 100% !important;
+}

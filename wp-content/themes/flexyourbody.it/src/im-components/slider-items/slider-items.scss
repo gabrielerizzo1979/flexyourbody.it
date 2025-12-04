@@ -1,0 +1,116 @@
+.im-slider-items {
+    overflow: hidden;
+
+    &__wrap {
+        position: relative;
+        // overflow: hidden;
+    }
+
+    &__media {
+        position: relative;
+        cursor: pointer;
+        background-color: $black;
+
+        picture {
+            position: relative;
+            display: block;
+            @include size(100%);
+            z-index: 1;
+
+            img {
+                display: block;
+                @include size(100%);
+            }
+        }
+
+        @include eq-mobile {
+            picture {
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+        @include at-tablet {
+            picture {
+                aspect-ratio: 1 / 1;
+                transition: opacity $timeMedium $easeQuadInOut;
+            }
+
+            &:hover {
+                picture {
+                    opacity: 0.6;
+                }
+
+                .im-carousel-gallery__icon {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        @include size(50px);
+        padding: 13px;
+        border-radius: 25px;
+        background-color: $line;
+        z-index: 2;
+
+        svg {
+            display: block;
+            @include size(24px);
+        }
+
+        @include eq-mobile {
+            @include centerX();
+            bottom: 20px;
+        }
+
+        @include at-tablet {
+            @include center();
+            opacity: 0;
+            transition: opacity $timeMedium $easeQuadInOut;
+        }
+    }
+
+    .swiper-container {
+        @include at-tablet {
+            overflow: hidden;
+        }
+    }
+
+    .swiper-pagination {
+        position: relative;
+        bottom: unset;
+        margin-top: 10px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        @include size(50px);
+        border-radius: 25px;
+        padding: 13px;
+        background-color: $line;
+
+        svg {
+            display: block;
+            @include size(24px);
+        }
+
+        @include eq-mobile {
+            display: none;
+        }
+    }
+
+    .swiper-button-prev {
+        @include at-tablet {
+            left: 0px;
+            transform: translateX(-65px);
+        }
+    }
+
+    .swiper-button-next {
+        @include at-tablet {
+            right: 0px;
+            transform: translateX(65px);
+        }
+    }
+}

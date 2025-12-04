@@ -1,0 +1,29 @@
+// COMPONENTE ARCHIVE FILTERS
+//--------------------------------------------------------------------//
+
+.archive-filters {
+    display: flex;
+    gap: $px-spacing-s;
+
+    @include eq-mobile {
+        margin-bottom: $rem-spacing-xxl;
+        flex-direction: column;
+    }
+
+    @include at-tablet {
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: $rem-spacing-xl-d;
+    }
+
+    .label-filters {
+        font-weight: $font-weight-medium;
+    }
+
+    select {
+        @extend %base-input;
+        @extend %select-form;
+    }
+}
+
+//--------------------------------------------------------------------//

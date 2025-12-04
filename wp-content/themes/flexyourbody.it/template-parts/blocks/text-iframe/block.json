@@ -1,0 +1,12 @@
+{
+    "name": "acf/text-iframe",
+    "title": "Testo con iframe - text-iframe",
+    "description": "Testo con iframe - text-iframe",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["testo", "mappa", "iframe"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/text-iframe/text-iframe.php"
+    }
+}

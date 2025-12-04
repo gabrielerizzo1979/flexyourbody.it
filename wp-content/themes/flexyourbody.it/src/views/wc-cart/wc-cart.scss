@@ -1,0 +1,312 @@
+.woocommerce-cart {
+    .wp-block-woocommerce-cart {
+        color: $wc-black;
+        font-family: $font-family-wc;
+
+        p {
+            @extend %wc-p;
+        }
+
+        // div {
+            .wp-block-woocommerce-empty-cart-block {
+                .wc-block-cart__empty-cart__title {
+                    @extend %wc-h4;
+                    text-align: center;
+
+                    &::before {
+                        margin-bottom: $rem-spacing-l;
+                    }
+                }
+
+                > p.has-text-align-center {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: $rem-spacing-l;
+
+                    a {
+                        @extend %wc-btn;
+                        @extend %wc-btn-black;
+                    }
+                }
+
+                .wp-block-separator {
+                    display: none;
+                }
+
+                h2.wp-block-heading:not(.wc-block-cart__empty-cart__title) {
+                    @extend %wc-h4;
+                    text-align: center;
+                    margin-top: $rem-spacing-3xl;
+
+                    @include eq-mobile {
+                        margin-bottom: $rem-spacing-xl;
+                    }
+
+                    @include at-tablet {
+                        margin-bottom: $rem-spacing-l;
+                    }
+                }
+            }
+
+            .wc-block-cart {
+                margin-bottom: 0;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                &__main {
+                    padding-right: 0;
+
+                    table.wc-block-cart-items {
+                        margin-bottom: 0;
+
+                        thead {
+                            @include screen-reader-text();
+                        }
+
+                        tbody {
+                            tr.wc-block-cart-items__row {
+                                @extend %mini-card-product;
+
+                                td {
+                                    margin: 0;
+                                }
+
+                                .wc-block-cart-item__image {
+                                    @include eq-mobile {
+                                        padding: 0;
+                                    }
+
+                                    @include eq-tablet {
+                                        padding: $px-spacing-l-m 0;
+                                    }
+
+                                    @include at-desktop {
+                                        padding: $px-spacing-l 0;
+                                    }
+                                }
+
+                                .wc-block-cart-item__product {
+                                    @include eq-mobile {
+                                        padding: 0 0 0 $px-spacing-l-m;
+                                    }
+
+                                    @include eq-tablet {
+                                        padding: $px-spacing-l-m 0
+                                            $px-spacing-l-m $px-spacing-l-m;
+                                    }
+
+                                    @include at-desktop {
+                                        padding: $px-spacing-l 0 $px-spacing-l
+                                            $px-spacing-l;
+                                    }
+                                }
+
+                                .wc-block-cart-item__total {
+                                    @include eq-mobile {
+                                        padding: 0 0 0 $px-spacing-l-m;
+                                    }
+
+                                    @include eq-tablet {
+                                        padding: $px-spacing-l-m 0
+                                            $px-spacing-l-m $px-spacing-l-m;
+                                    }
+
+                                    @include at-desktop {
+                                        padding: $px-spacing-l 0 $px-spacing-l
+                                            $px-spacing-l-m;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &__sidebar {
+                    border-radius: 6px;
+                    background-color: $wc-white;
+
+                    .wc-block-cart__totals-title {
+                        display: block;
+                        @extend %wc-h4;
+                        padding: 0 0 $rem-spacing-l 0;
+                        text-transform: none;
+                        text-align: left;
+                    }
+
+                    .wp-block-woocommerce-cart-order-summary-block {
+                        margin-bottom: $rem-spacing-l;
+                        border-bottom: 0;
+                    }
+
+                    .wp-block-woocommerce-cart-order-summary-coupon-form-block {
+                        border-color: $wc-grey;
+
+                        .wc-block-components-totals-coupon {
+                            padding: 0;
+
+                            .wc-block-components-totals-coupon-link {
+                                @extend %wc-link;
+                            }
+
+                            #wc-block-components-totals-coupon__form {
+                                display: flex;
+                                align-items: stretch;
+                                gap: $px-spacing-l-m;
+
+                                button {
+                                    height: auto;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    @extend %wc-btn;
+                                    @extend %wc-btn-small;
+                                    @extend %wc-btn-black;
+                                }
+                            }
+                        }
+                    }
+
+                    .wp-block-woocommerce-cart-order-summary-subtotal-block {
+                        .wc-block-components-totals-item {
+                            padding: 0;
+
+                            .wc-block-components-totals-item__label {
+                                @extend %wc-h5;
+                            }
+
+                            .wc-block-formatted-money-amount {
+                                @extend %wc-p;
+                            }
+                        }
+                    }
+
+                    .wc-block-components-totals-footer-item {
+                        padding: 0;
+
+                        .wc-block-components-totals-item__label,
+                        .wc-block-formatted-money-amount {
+                            @extend %wc-h4;
+                        }
+                    }
+
+                    .wc-block-components-shipping-calculator-address {
+                        .wc-block-components-button {
+                            @extend %wc-btn;
+                            @extend %wc-btn-black-outline;
+                            @extend %wc-btn-small;
+                            margin-top: 16px;
+                        }
+                    }
+
+                    .wc-block-cart__payment-options {
+                        padding: 0;
+
+                        iframe.component-frame {
+                            z-index: 2 !important;
+                        }
+                    }
+
+                    .wc-block-components-totals-wrapper {
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                    }
+
+                    .wc-block-cart__submit {
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .wc-block-cart__submit-button {
+                        @extend %wc-btn;
+                        @extend %wc-btn-black;
+                    }
+
+                    .wc-block-cart__submit-container--sticky {
+                        background-color: $wc-white !important;
+                    }
+                }
+
+                &:not(.is-large) {
+                    flex-direction: column;
+                    gap: $rem-spacing-3xl;
+
+                    .wc-block-cart__main {
+                        width: 100%;
+                    }
+
+                    .wc-block-cart__sidebar {
+                        width: 100%;
+                        padding: $px-basic-int-s-padding;
+                    }
+                }
+
+                &:not(.is-large):not(.is-medium) {
+                    .wc-block-cart-items {
+                        &__row {
+                            @extend %mini-card-product--small;
+
+                            &:last-child {
+                                @include eq-mobile {
+                                    padding-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.is-medium {
+                    .wc-block-cart__main {
+                        table.wc-block-cart-items {
+                            tbody {
+                                tr.wc-block-cart-items__row {
+                                    border-top: 1px solid $wc-grey;
+
+                                    &:last-child {
+                                        border-bottom: 1px solid $wc-grey;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.is-large {
+                    .wc-block-cart__main {
+                        @include at-tablet {
+                            width: calc(60% - $px-spacing-xl-d---padding-l-d);
+                        }
+                    }
+
+                    .wc-block-cart__sidebar {
+                        @include eq-tablet {
+                            padding: $px-spacing-l-m;
+                            width: 40%;
+                        }
+
+                        @include at-desktop {
+                            padding: $px-spacing-l;
+                            width: calc(40% - $px-spacing-xl-d---padding-l-d);
+                        }
+
+                        .wc-block-components-totals-item {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+
+                        .wc-block-components-shipping-rates-control__package {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+
+                        .wc-block-components-shipping-calculator {
+                            padding: 16px 0 0;
+                        }
+                    }
+                }
+            }
+        // }
+    }
+}

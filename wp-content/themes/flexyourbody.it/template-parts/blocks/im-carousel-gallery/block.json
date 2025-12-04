@@ -1,0 +1,12 @@
+{
+    "name": "acf/im-carousel-gallery",
+    "title": "Carousel gallery - im-carousel-gallery",
+    "description": "Carousel gallery - im-carousel-gallery",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["carousel", "gallery"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/im-carousel-gallery/im-carousel-gallery.php"
+    }
+}

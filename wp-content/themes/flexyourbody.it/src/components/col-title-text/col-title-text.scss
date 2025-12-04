@@ -1,0 +1,49 @@
+// COMPONENTE COL TITLE TEXT
+//--------------------------------------------------------------------//
+
+.col-title-text {
+    &__wrap {
+        @include eq-mobile {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include at-tablet {
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-auto-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: min-content;
+            column-gap: $px-spacing-base;
+            grid-template-areas:
+                'block-1 block-2'
+                'block-3 block-2';
+        }
+    }
+
+    &__first-col {
+        @include eq-mobile {
+            margin-bottom: $rem-spacing-l;
+        }
+
+        @include at-tablet {
+            grid-area: block-1;
+        }
+    }
+
+    &__second-col {
+        @include at-tablet {
+            grid-area: block-2;
+        }
+    }
+
+    &__cta-wrap {
+        margin-top: $rem-spacing-l;
+
+        @include at-tablet {
+            grid-area: block-3;
+        }
+    }
+}
+
+//--------------------------------------------------------------------//

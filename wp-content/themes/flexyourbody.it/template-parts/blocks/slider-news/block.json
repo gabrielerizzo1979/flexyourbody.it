@@ -1,0 +1,12 @@
+{
+    "name": "acf/slider-news",
+    "title": "Slider news - slider-news",
+    "description": "Slider news - slider-news",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["slider", "news"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/slider-news/slider-news.php"
+    }
+}

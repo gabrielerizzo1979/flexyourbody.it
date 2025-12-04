@@ -1,0 +1,12 @@
+{
+    "name": "acf/spacer",
+    "title": "Spacer",
+    "description": "Spacer",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["spacer", "spazio"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/spacer/spacer.php"
+    }
+}

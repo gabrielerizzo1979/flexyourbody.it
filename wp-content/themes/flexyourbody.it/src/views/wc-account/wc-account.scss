@@ -1,0 +1,364 @@
+.woocommerce-account {
+    .woocommerce {
+        // START - Stile pagina login
+
+        .woocommerce-form {
+            border-color: $wc-grey;
+
+            button[type='submit'] {
+                margin-right: 0px;
+            }
+
+            .woocommerce-form__label-for-checkbox {
+                margin-bottom: $rem-spacing-l;
+
+                span {
+                    display: inline-block;
+                    cursor: pointer;
+                }
+            }
+
+            .lost_password {
+                a {
+                    @extend %wc-link;
+                }
+            }
+        }
+
+        #customer_login {
+            @include at-desktop {
+                display: flex;
+                justify-content: space-between;
+                gap: $px-spacing-l;
+            }
+
+            &::before,
+            &::after {
+                content: none;
+            }
+
+            h2 {
+                @extend %wc-h4;
+                margin-bottom: $rem-spacing-l;
+            }
+
+            .col-1,
+            .col-2 {
+                width: 100%;
+                float: unset;
+                border-radius: 6px;
+                background-color: $wc-white;
+                color: $wc-black;
+                padding: $px-basic-int-s-padding;
+            }
+
+            .col-1 {
+                background-color: $wc-white;
+                color: $wc-black;
+
+                @include pre-desktop {
+                    margin-bottom: $rem-spacing-l;
+                }
+            }
+
+            .col-2 {
+            }
+
+            .woocommerce-form {
+                border: none;
+                border-radius: 0;
+                padding: 0;
+                margin: 0;
+
+                &.register {
+                    button[type='submit'] {
+                        margin-top: $rem-spacing-l;
+                    }
+                }
+            }
+        }
+        // END - Stile pagina login
+
+        // START - Stile pagina recupero password
+        .lost_reset_password {
+            background-color: $wc-white;
+            padding: $px-basic-int-s-padding;
+            border-radius: 6px;
+            color: $wc-black;
+
+            > p:not(.form-row) {
+                margin-bottom: $rem-spacing-l;
+            }
+
+            .form-row {
+                float: unset;
+
+                &:not(.form-row-first) {
+                    margin-bottom: 0;
+                }
+
+                button.woocommerce-Button {
+                    margin-top: $rem-spacing-l;
+                }
+
+                &:has(.woocommerce-Button) {
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+        // END - Stile pagina recupero password
+
+        // START - Stile Dashboard Utente
+        &:not(.widget) {
+            &::before,
+            &::after {
+                content: none;
+            }
+
+            h2 {
+                @extend %wc-h4;
+                margin-bottom: $rem-spacing-l;
+            }
+
+            p {
+                @extend %wc-p;
+            }
+
+            .woocommerce-MyAccount-navigation {
+                width: 100%;
+                float: unset;
+                position: relative;
+
+                ul {
+                    list-style: none;
+                    padding: 0px;
+                    margin: 0px;
+                    padding-bottom: 10px;
+                    box-sizing: border-box;
+
+                    li {
+                        width: 100%;
+                        display: block;
+                        border: 0;
+                        text-align: center;
+                        border-bottom: 1px solid $wc-black;
+                        flex-shrink: 1 !important;
+                        transition: opacity $timeFast ease-in-out;
+
+                        a {
+                            @extend %wc-p;
+                            display: block;
+                            width: 100%;
+                            position: relative;
+                            text-decoration: none;
+                            color: $wc-black;
+                            white-space: nowrap;
+                            padding: 0 $rem-spacing-s $px-spacing-s;
+                            border-bottom: 1px solid transparent;
+                            transition: border-color $timeFast ease-in-out,
+                                font-weight $timeFast ease-in-out;
+                        }
+
+                        &.is-active {
+                            a {
+                                border-color: $wc-black;
+                                font-weight: 600 !important;
+                            }
+                        }
+
+                        &:hover {
+                            @include at-tablet {
+                                a {
+                                    border-color: $wc-black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .woocommerce-MyAccount-content {
+                float: none;
+                width: 100%;
+                margin-top: $rem-spacing-xl;
+
+                > p > a {
+                    @extend %wc-link;
+                }
+
+                .my_account_orders {
+                    tbody td {
+                        .button {
+                            width: 100%;
+                            @extend %wc-btn;
+                            @extend %wc-btn-small;
+                            @extend %wc-btn-black-outline;
+                        }
+                    }
+                }
+
+                .woocommerce-order-details {
+                    &:not(:first-child) {
+                        margin-top: $rem-spacing-l;
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: $rem-spacing-l;
+                    }
+
+                    .order_details {
+                    }
+                }
+
+                .woocommerce-customer-details {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    address {
+                        border: 0px;
+                        padding: 0px;
+
+                        .woocommerce-customer-details--phone,
+                        .woocommerce-customer-details--email {
+                            padding-left: 0;
+
+                            &::before {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+
+                .addresses {
+                    margin-top: $rem-spacing-l;
+                    display: grid;
+                    gap: $px-spacing-xl;
+
+                    @include eq-mobile {
+                        grid-template-columns: 1fr;
+                    }
+
+                    @include at-tablet {
+                        grid-template-columns: 1fr 1fr;
+                    }
+
+                    &::before,
+                    &::after {
+                        content: none;
+                    }
+
+                    .title {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: $rem-spacing-s;
+                        margin-bottom: $rem-spacing-m;
+
+                        h2 {
+                            margin-bottom: 0;
+                        }
+
+                        h3 {
+                            @extend %wc-h4;
+                        }
+
+                        .edit {
+                            @extend %wc-link;
+                        }
+
+                        &::after,
+                        &::before {
+                            content: none;
+                        }
+                    }
+
+                    address {
+                        font-style: normal;
+                    }
+
+                    .col-1,
+                    .col-2 {
+                        width: 100%;
+                        float: unset;
+                    }
+                }
+
+                > form {
+                    background-color: $wc-white;
+                    padding: $px-basic-int-s-padding;
+
+                    > h3 {
+                        @extend %wc-h4;
+                        margin-bottom: $rem-spacing-l;
+                    }
+
+                    .woocommerce-address-fields__field-wrapper {
+                        display: grid;
+                        grid-row-gap: $rem-spacing-l;
+                        grid-column-gap: $px-spacing-l;
+                        margin-bottom: $rem-spacing-l;
+
+                        @include eq-mobile {
+                            grid-template-columns: 1fr;
+                        }
+
+                        @include at-tablet {
+                            grid-template-columns: repeat(
+                                auto-fill,
+                                minmax(300px, 1fr)
+                            );
+                        }
+
+                        > p {
+                            width: 100%;
+                            margin: 0;
+                            display: flex;
+                            flex-direction: column;
+
+                            label {
+                                display: block;
+                            }
+
+                            > span {
+                                display: block;
+                                margin-top: auto;
+
+                                input {
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                form.woocommerce-EditAccountForm {
+                    .form-row-first,
+                    .form-row-last {
+                        @include eq-mobile {
+                            width: 100%;
+                            float: unset;
+                        }
+
+                        @include at-tablet {
+                            width: calc(50% - #{$px-spacing-l} / 2);
+                        }
+                    }
+
+                    .woocommerce-form-row {
+                        span {
+                            display: block;
+                            margin-top: $px-spacing-s;
+
+                            em {
+                                @extend %wc-p-small;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // END - Stile Dashboard Utente
+    }
+}

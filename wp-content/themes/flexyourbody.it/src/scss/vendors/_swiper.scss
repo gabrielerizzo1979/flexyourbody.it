@@ -1,0 +1,55 @@
+@use '../base' as *;
+
+.swiper-button-next,
+.swiper-button-prev {
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-container-horizontal {
+    > .swiper-pagination-progressbar {
+        top: auto !important;
+        bottom: 0px;
+    }
+}
+
+.common-swiper-el {
+    overflow: hidden;
+
+    .swiper {
+        overflow: visible;
+        position: relative;
+    }
+
+    .swiper-wrapper {
+        position: relative;
+    }
+
+    .swiper-slide {
+        height: auto !important;
+    }
+
+    .swiper-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: $rem-spacing-l;
+        margin-top: $rem-spacing-l-d---spacing-xl-m;
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            margin-top: 0;
+            color: currentColor;
+            position: static;
+            @include size(33px);
+            border-radius: 50%;
+            border: 1px solid currentColor;
+
+            svg {
+                display: block;
+                @include size(10px);
+                fill: currentColor;
+            }
+        }
+    }
+}

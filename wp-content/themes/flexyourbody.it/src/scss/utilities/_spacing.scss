@@ -1,0 +1,182 @@
+@use '../base' as *;
+
+//SPACER
+.spacer {
+    &.s-margin {
+        height: $rem-spacing-l;
+    }
+
+    &.s-m-spacer {
+        @include pre-desktop {
+            height: $rem-spacing-l;
+        }
+
+        @include at-desktop {
+            display: none;
+        }
+    }
+
+    &.s-d-spacer {
+        @include pre-desktop {
+            display: none;
+        }
+
+        @include at-desktop {
+            height: $rem-spacing-l;
+        }
+    }
+
+    &.m-margin {
+        height: $rem-spacing-xl;
+    }
+
+    &.m-m-spacer {
+        @include pre-desktop {
+            height: $rem-spacing-xl;
+        }
+
+        @include at-desktop {
+            display: none;
+        }
+    }
+
+    &.m-d-spacer {
+        @include pre-desktop {
+            display: none;
+        }
+
+        @include at-desktop {
+            height: $rem-spacing-xl;
+        }
+    }
+
+    &.l-margin {
+        height: $rem-spacing-3xl;
+    }
+
+    &.l-m-spacer {
+        @include pre-desktop {
+            height: $rem-spacing-3xl;
+        }
+
+        @include at-desktop {
+            display: none;
+        }
+    }
+
+    &.l-d-spacer {
+        @include pre-desktop {
+            display: none;
+        }
+
+        @include at-desktop {
+            height: $rem-spacing-3xl;
+        }
+    }
+}
+
+//PADDING
+.padding {
+    padding-top: $rem-spacing-3xl;
+    padding-bottom: $rem-spacing-3xl;
+}
+
+.padding-top {
+    padding-top: $rem-spacing-3xl;
+}
+
+.padding-bottom {
+    padding-bottom: $rem-spacing-3xl;
+}
+
+.padding-d {
+    @include at-desktop {
+        padding-top: $rem-spacing-3xl;
+        padding-bottom: $rem-spacing-3xl;
+    }
+}
+
+.padding-top-d {
+    @include at-desktop {
+        padding-top: $rem-spacing-3xl;
+    }
+}
+
+.padding-bottom-d {
+    @include at-desktop {
+        padding-bottom: $rem-spacing-3xl;
+    }
+}
+
+.padding-m {
+    @include pre-desktop {
+        padding-top: $rem-spacing-3xl;
+        padding-bottom: $rem-spacing-3xl;
+    }
+}
+
+.padding-top-m {
+    @include pre-desktop {
+        padding-top: $rem-spacing-3xl;
+    }
+}
+
+.padding-bottom-m {
+    @include pre-desktop {
+        padding-bottom: $rem-spacing-3xl;
+    }
+}
+
+//MARGIN
+//--------------------------------------------------------------------//
+
+.margin {
+    margin-top: $rem-spacing-3xl;
+    margin-bottom: $rem-spacing-3xl;
+}
+
+.margin-top {
+    margin-top: $rem-spacing-3xl;
+}
+
+.margin-bottom {
+    margin-bottom: $rem-spacing-3xl;
+}
+
+.margin-d {
+    @include at-desktop {
+        margin-top: $rem-spacing-3xl;
+        margin-bottom: $rem-spacing-3xl;
+    }
+}
+
+.margin-top-d {
+    @include at-desktop {
+        margin-top: $rem-spacing-3xl;
+    }
+}
+
+.margin-bottom-d {
+    @include at-desktop {
+        margin-bottom: $rem-spacing-3xl;
+    }
+}
+
+.margin-m {
+    @include pre-desktop {
+        margin-top: $rem-spacing-3xl;
+        margin-bottom: $rem-spacing-3xl;
+    }
+}
+
+.margin-top-m {
+    @include pre-desktop {
+        margin-top: $rem-spacing-3xl;
+    }
+}
+
+.margin-bottom-m {
+    @include pre-desktop {
+        margin-bottom: $rem-spacing-3xl;
+    }
+}

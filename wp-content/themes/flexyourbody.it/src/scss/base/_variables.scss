@@ -1,0 +1,74 @@
+@use 'mixins' as *;
+// Padding
+//------------------------------------------------------------------------------//
+// clamp 320 - 1440
+$px-spacing-base: clamp(24px, 13.714px + 3.214vw, 60px);
+$px-spacing-mobile: 24px;
+$px-spacing-tablet: 40px;
+$px-spacing-desktop: 60px;
+
+// clamp 767 - 1440
+$px-basic-int-s-padding: clamp(24px, 17.162px + 0.892vw, 30px);
+
+// clamp 320 - 1440
+$px-spacing-xs: 4px;
+$px-spacing-s: 8px;
+$px-spacing-m: clamp(8px, 5.714px + 0.714vw, 16px);
+$px-spacing-l: clamp(16px, 12px + 1.25vw, 30px);
+$px-spacing-xl: clamp(24px, 13.714px + 3.214vw, 60px);
+$px-spacing-xxl: clamp(32px, 18.286px + 4.286vw, 80px);
+$px-spacing-3xl: clamp(56px, 43.429px + 3.929vw, 100px);
+
+$px-spacing-m-m: 8px;
+$px-spacing-l-m: 16px;
+$px-spacing-xl-m: 24px;
+$px-spacing-xxl-m: 32px;
+$px-spacing-3xl-m: 56px;
+
+$px-spacing-xs-d: 5px;
+$px-spacing-s-d: 10px;
+$px-spacing-m-d: 16px;
+$px-spacing-l-d: 30px;
+$px-spacing-xl-d: 60px;
+$px-spacing-xxl-d: 80px;
+$px-spacing-3xl-d: 100px;
+
+// Spacing
+//------------------------------------------------------------------------------//
+// clamp 320 - 1440
+$rem-spacing-xs: rem(4);
+$rem-spacing-s: rem(8);
+$rem-spacing-m: clamp(0.5rem, 0.357rem + 0.714vw, 1rem);
+$rem-spacing-l: clamp(1rem, 0.75rem + 1.25vw, 1.875rem);
+$rem-spacing-xl: clamp(1.5rem, 0.857rem + 3.214vw, 3.75rem);
+$rem-spacing-xxl: clamp(2rem, 1.143rem + 4.286vw, 5rem);
+$rem-spacing-3xl: clamp(3.5rem, 2.714rem + 3.929vw, 6.25rem);
+
+$rem-spacing-m-m: rem(8);
+$rem-spacing-l-m: rem(16);
+$rem-spacing-xl-m: rem(24);
+$rem-spacing-xxl-m: rem(32);
+$rem-spacing-3xl-m: rem(56);
+
+$rem-spacing-xs-d: rem(5);
+$rem-spacing-s-d: rem(10);
+$rem-spacing-m-d: rem(16);
+$rem-spacing-l-d: rem(30);
+$rem-spacing-xl-d: rem(60);
+$rem-spacing-xxl-d: rem(80);
+$rem-spacing-3xl-d: rem(100);
+
+//
+//------------------------------------------------------------------------------//
+// clamp 320 - 1440
+$rem-spacing-l-d---spacing-xl-m: clamp(1.5rem, 1.393rem + 0.536vw, 1.875rem);
+$rem-spacing-xl-d---spacing-xxl-m: clamp(2rem, 1.5rem + 2.5vw, 3.75rem);
+
+// clamp 1440 - 1920
+$px-spacing-xl-d---padding-l-d: clamp(30px, -60px + 6.25vw, 60px);
+
+//Border radius
+//------------------------------------------------------------------------------//
+//
+
+$regular-border-radius: 8px;

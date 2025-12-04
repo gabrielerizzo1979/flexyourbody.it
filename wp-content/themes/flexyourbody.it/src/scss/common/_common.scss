@@ -1,0 +1,251 @@
+@use '../base' as *;
+
+// Set Typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    font-family: var(--font-family-title);
+    overflow-wrap: break-word;
+}
+
+.h1 {
+    @include h1();
+}
+
+.h2 {
+    @include h2();
+}
+
+.h3 {
+    @include h3();
+}
+
+.h4 {
+    @include h4();
+}
+
+.h5 {
+    @include h5();
+}
+
+.header {
+    &__menu {
+        #block-main-menu {
+            > ul > li > a {
+                @include h2();
+            }
+        }
+    }
+}
+
+p,
+.p,
+ul,
+ol {
+    @include p();
+    overflow-wrap: break-word;
+}
+
+a {
+    background-color: transparent;
+    overflow-wrap: break-word;
+    @extend %link;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+strong,
+b {
+    font-weight: $font-weight-bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+.over-head {
+    @include over-head();
+    margin-bottom: $rem-spacing-xs;
+}
+
+.p-small {
+    @include p-small();
+}
+
+.quote {
+    @include quote();
+}
+
+.text-link {
+    @extend %text-link;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.img-content {
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+.screen-reader-text {
+    @include screen-reader-text();
+}
+
+//common mini-blocks
+
+.common-title-box {
+    &--s {
+        .title-box {
+            margin-bottom: $rem-spacing-l-d---spacing-xl-m;
+        }
+    }
+
+    &--m {
+        .title-box {
+            margin-bottom: $rem-spacing-xl-d---spacing-xxl-m;
+        }
+    }
+}
+
+.common-text-editor-style {
+    h1,
+    h2 {
+        margin: 0 0 $rem-spacing-m 0;
+        font-family: $font-family-primary;
+        font-weight: $font-weight-semibold;
+        font-size: rem(16);
+        line-height: 1.5;
+    }
+
+    h3,
+    h4,
+    h6 {
+        margin: 0 0 $rem-spacing-m 0;
+        font-family: $font-family-primary;
+        font-weight: $font-weight-bold;
+        font-size: rem(10);
+        line-height: 1.7;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding: rem(10) 0 0 20px;
+    }
+
+    ol {
+        list-style-type: decimal;
+        padding: rem(10) 0 0 30px;
+    }
+
+    ul,
+    ol {
+        li {
+            padding: 0;
+
+            &:not(:last-child) {
+                padding-bottom: rem(10);
+            }
+        }
+
+        &:not(:last-child) {
+            padding-bottom: rem(10);
+        }
+
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    blockquote {
+        margin: 0;
+
+        p {
+            @include quote();
+        }
+    }
+}
+
+//stile testo e cta - background
+
+.bg-image {
+    color: $white;
+
+    .btn-base:not([class*='btn--style']) {
+        @include btn-white-outline();
+    }
+}
+
+.bg-common {
+    color: $primary;
+
+    .btn-base:not([class*='btn--style']) {
+        @include btn-primary-outline();
+    }
+}
+
+.bg-light {
+    color: $primary;
+
+    .btn-base:not([class*='btn--style']) {
+        @include btn-secondary();
+    }
+}
+
+.bg-secondary {
+    color: var(--tertiary-color);
+
+    .btn-base:not([class*='btn--style']) {
+        @include variable-button();
+    }
+}
+
+//--------------------------------------------------------------------//
+.pswp__caption__center {
+    text-align: center;
+}
+
+.grecaptcha-badge {
+    z-index: 999;
+}
+
+.otgs-development-site-front-end {
+    display: none !important;
+}
+
+#iub-pp-container {
+    #wbars_all {
+        .iub_container {
+            margin: 0;
+
+            #wbars {
+                .iub_content {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

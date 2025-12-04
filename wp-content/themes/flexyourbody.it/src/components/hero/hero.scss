@@ -1,0 +1,11 @@
+.hero {
+    margin: $rem-spacing-xl 0;
+
+    &__container {
+        text-align: center;
+    }
+
+    &__p {
+        margin-top: $rem-spacing-s;
+    }
+}

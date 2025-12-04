@@ -1,0 +1,43 @@
+.marquee {
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    padding: 8px 0;
+
+    p {
+        display: inline-block;
+    }
+
+    &.off {
+        .text {
+            line-height: 1;
+            width: 100%;
+            text-align: center;
+            @include p();
+            padding: 0 $px-spacing-base;
+        }
+    }
+
+    &.on {
+        .marquee__loop {
+            display: flex;
+            white-space: nowrap;
+            will-change: transform;
+
+            &.active {
+                animation: loop-anim linear infinite;
+            }
+        }
+
+        .marquee__content {
+            @include p();
+            line-height: 1;
+        }
+
+        &:hover {
+            .marquee__loop {
+                animation-play-state: paused;
+            }
+        }
+    }
+}

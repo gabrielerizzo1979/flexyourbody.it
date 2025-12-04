@@ -1,0 +1,61 @@
+// COMPONENTE BOX IMAGE
+//--------------------------------------------------------------------//
+
+.box-image {
+    &__container {
+        &.full-width {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        picture {
+            overflow: hidden;
+
+            &.fixed-size {
+                @include eq-mobile {
+                    aspect-ratio: 1;
+                }
+
+                @include at-tablet {
+                    aspect-ratio: 55 / 26;
+                }
+
+                img {
+                    @include size(100%);
+                }
+            }
+
+            &.width-fixed {
+                width: 100%;
+                height: auto;
+
+                img {
+                    @include size(100%, auto);
+                }
+            }
+
+            &.auto-size {
+                max-width: 100%;
+                width: auto;
+                height: auto;
+
+                img {
+                    max-width: 100%;
+                    @include size(auto);
+                    margin: 0 auto;
+                }
+            }
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: $rem-spacing-xl-d---spacing-xxl-m;
+    }
+}
+
+//--------------------------------------------------------------------//

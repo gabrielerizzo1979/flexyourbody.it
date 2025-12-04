@@ -1,0 +1,12 @@
+{
+    "name": "acf/custom-quote",
+    "title": "Citazione - custom-quote",
+    "description": "Citazione - custom-quote",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["citazione", "quote"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/custom-quote/custom-quote.php"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "acf/box-form",
+    "title": "Contact form - box-form",
+    "description": "Contact form - box-form",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["contact", "form"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/box-form/box-form.php"
+    }
+}

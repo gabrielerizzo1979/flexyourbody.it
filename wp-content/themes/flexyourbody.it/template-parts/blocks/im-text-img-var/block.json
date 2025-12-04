@@ -1,0 +1,12 @@
+{
+    "name": "acf/im-text-img-var",
+    "title": "Testo e immagine - im-text-img-var",
+    "description": "Testo e immagine - im-text-img-var",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["testo", "immagine"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/im-text-img-var/im-text-img-var.php"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "acf/col-title-text",
+    "title": "Testo con titolo a lato - col-title-text",
+    "description": "Testo con titolo a lato - col-title-text",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["testo", "titolo"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/col-title-text/col-title-text.php"
+    }
+}

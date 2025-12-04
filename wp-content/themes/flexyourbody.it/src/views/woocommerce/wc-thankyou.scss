@@ -1,0 +1,192 @@
+.woocommerce-order-received {
+    .woocommerce-order {
+        width: 100%;
+        background-color: $wc-white;
+
+        @include eq-mobile {
+            padding: $px-spacing-base;
+        }
+
+        @include at-tablet {
+            padding: $px-spacing-l;
+        }
+
+        .woocommerce-thankyou-order-received {
+            @extend %wc-h4;
+            margin-bottom: $rem-spacing-l;
+        }
+
+        ul.order_details {
+            margin-bottom: $rem-spacing-xl;
+
+            li {
+                float: unset;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: $rem-spacing-xs;
+                margin-right: 0px;
+                border: 0;
+                text-transform: none;
+                padding: 0 0 rem(16) 0;
+                word-break: break-word;
+                @extend %wc-p;
+
+                strong {
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: inherit;
+                    line-height: inherit;
+                    background-color: transparent;
+                    font-weight: $font-weight-semibold;
+
+                    @include eq-mobile {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .woocommerce-order-details {
+            margin-top: $rem-spacing-xl;
+            margin-bottom: $rem-spacing-xl;
+
+            .woocommerce-order-details__title {
+                @extend %wc-h4;
+                margin-bottom: $rem-spacing-l;
+            }
+
+            table.order_details {
+                margin: 0;
+
+                thead {
+                    tr {
+                        th {
+                            &:first-child {
+                                width: 50%;
+                            }
+
+                            &:last-child {
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+
+                tfoot {
+                    tr {
+                        th,
+                        td {
+                            @extend %wc-h5;
+                        }
+                    }
+                }
+            }
+
+            table.woocommerce-table--custom-fields {
+                tbody {
+                    tr {
+                        th:first-child {
+                            width: 50%;
+                        }
+
+                        td:last-child {
+                            width: 50%;
+                        }
+
+                        th,
+                        td {
+                            @extend %wc-h5;
+                        }
+                    }
+                }
+            }
+        }
+
+        .woocommerce-bacs-bank-details {
+            margin-top: $rem-spacing-l;
+
+            .woocommerce-column__title {
+                @extend %wc-h4;
+                margin-bottom: $rem-spacing-l;
+            }
+
+            .wc-bacs-bank-details-heading,
+            .wc-bacs-bank-details-account-name {
+                margin-bottom: $rem-spacing-xl;
+            }
+
+            .wc-bacs-bank-details-account-name {
+                font-family: $font-family-wc;
+                font-weight: $font-weight-regular;
+            }
+        }
+
+        .woocommerce-customer-details {
+            .woocommerce-column__title {
+                @extend %wc-h4;
+                margin-bottom: $rem-spacing-l;
+            }
+
+            address {
+                border: 0px;
+                padding: 0px;
+                @extend %wc-p;
+
+                p {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
+            }
+
+            .col-1 {
+                @include eq-mobile {
+                    margin-bottom: $rem-spacing-xxl;
+                }
+            }
+
+            .woocommerce-columns {
+                display: flex;
+                flex-wrap: wrap;
+
+                &::after {
+                    content: none;
+                }
+
+                &::before {
+                    content: none;
+                }
+
+                &.woocommerce-columns--2 {
+                    .col-1,
+                    .col-2 {
+                        @include eq-mobile {
+                            width: 100%;
+                        }
+
+                        @include at-tablet {
+                            width: 50%;
+                        }
+                    }
+
+                    .col-1 {
+                        @include at-tablet {
+                            padding-right: 15px;
+                        }
+                    }
+
+                    .col-2 {
+                        @include at-tablet {
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+body.align-left {
+    .im-text-on-bg:not(.im-text-on-bg--banner) {
+        .im-text-on-bg__text {
+            align-items: flex-start;
+            text-align: left;
+        }
+    }
+}
+
+body.align-center {
+    .im-text-on-bg {
+        &:not(.one-column) {
+            .im-text-on-bg__text {
+                @include eq-mobile {
+                    align-items: flex-start;
+                    text-align: left;
+                }
+
+                @include at-tablet {
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        }
+
+        &.one-column {
+            .im-text-on-bg__text {
+                align-items: flex-start;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.im-text-on-bg {
+    &__container {
+        position: relative;
+    }
+
+    &__over-head {
+    }
+
+    &__text {
+        width: 100%;
+        text-align: center;
+
+        > *:first-child {
+            margin-top: 0;
+        }
+
+        &.min-height {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include eq-mobile {
+                min-height: 400px;
+            }
+
+            @include eq-tablet {
+                min-height: 380px;
+            }
+
+            @include at-desktop {
+                min-height: 360px;
+            }
+        }
+    }
+
+    &__quote-wrap {
+        width: 100%;
+        margin-top: $rem-spacing-l;
+
+        p {
+            @include h3();
+        }
+
+        blockquote {
+            margin: 0;
+        }
+    }
+
+    &__p {
+        width: 100%;
+        margin-top: $rem-spacing-l;
+
+        @include pre-desktop {
+            gap: $rem-spacing-l;
+        }
+
+        @include at-desktop {
+            gap: $px-spacing-xxl;
+        }
+
+        .col-text {
+            width: 100%;
+            text-align: left;
+
+            &.auto-col {
+                @include at-desktop {
+                    column-count: 2;
+                    column-gap: $px-spacing-l;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        margin-top: $rem-spacing-l;
+    }
+}

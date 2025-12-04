@@ -1,0 +1,55 @@
+@use '../base' as *;
+
+.basic-container {
+    @extend %basic-container;
+}
+
+.fluid-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0px auto;
+
+    &.basic-container {
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+    }
+}
+
+.extra-large-container {
+    width: 100%;
+    display: block;
+    max-width: rem(1920);
+    margin: 0 auto;
+
+    @include pre-desktop {
+        padding-left: $px-spacing-base;
+        padding-right: $px-spacing-base;
+    }
+
+    @include at-desktop {
+        padding-left: $px-spacing-desktop;
+        padding-right: $px-spacing-desktop;
+    }
+}
+
+.container {
+    > .container-grid-el {
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+}
+
+.medium-container {
+    > .container-grid-el {
+        grid-column-start: 2;
+        grid-column-end: 12;
+    }
+}
+
+.small-container {
+    > .container-grid-el {
+        grid-column-start: 3;
+        grid-column-end: 11;
+    }
+}

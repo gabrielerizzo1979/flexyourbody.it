@@ -1,0 +1,12 @@
+{
+    "name": "acf/im-text-on-bg",
+    "title": "Testo a due colonne con sfondo - im-text-on-bg",
+    "description": "Testo a due colonne con sfondo - im-text-on-bg",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["testo", "colonne", "immagine"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/im-text-on-bg/im-text-on-bg.php"
+    }
+}

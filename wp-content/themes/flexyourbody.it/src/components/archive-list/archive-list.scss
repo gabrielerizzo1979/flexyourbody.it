@@ -1,0 +1,62 @@
+.archive-list {
+    &__container {
+    }
+
+    &__wrap {
+        display: grid;
+
+        @include eq-mobile {
+            gap: $px-spacing-xxl $px-spacing-l;
+        }
+
+        @include at-tablet {
+            gap: $px-spacing-xl $px-spacing-l;
+        }
+
+        @media (max-width: 520px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @media (min-width: 521px) and (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 901px) and (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include eq-desktop {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include extend-desktop {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .pager {
+        display: flex;
+        margin-top: $rem-spacing-xl;
+
+        &__items {
+            display: flex;
+            margin: 0 auto;
+            font-size: rem(16);
+            color: var(--primary);
+
+            li a {
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .active {
+                text-decoration: underline;
+            }
+        }
+    }
+}

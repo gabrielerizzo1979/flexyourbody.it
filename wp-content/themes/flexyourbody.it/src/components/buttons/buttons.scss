@@ -1,0 +1,50 @@
+// COMPONENTE BUTTON
+//--------------------------------------------------------------------//
+
+.btn-base {
+    @include btn-base();
+
+    &.btn {
+        &--small {
+            @include btn-small();
+        }
+
+        &--style-primary {
+            @include btn-primary();
+        }
+
+        &--style-secondary {
+            @include btn-secondary();
+        }
+
+        &--style-white {
+            @include btn-white();
+        }
+
+        &--style-primary-outline {
+            @include btn-primary-outline();
+        }
+
+        &--style-white-outline {
+            @include btn-white-outline();
+        }
+    }
+}
+
+a.btn-base {
+    display: inline-block;
+}
+
+.link-base {
+    @extend %link-base;
+
+    &.link-white {
+        @extend %link-white;
+    }
+
+    &.link-primary {
+        @extend %link-primary;
+    }
+}
+
+//--------------------------------------------------------------------//

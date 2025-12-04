@@ -1,0 +1,90 @@
+// COMPONENTE Accordion
+//--------------------------------------------------------------------//
+
+.custom-accordion {
+    .im-accordion {
+        border-bottom: 1px solid $primary;
+        color: $primary;
+
+        &:not(:first-child) {
+            padding-top: $rem-spacing-l;
+        }
+
+        &__toggle {
+            display: flex;
+            justify-content: space-between;
+            gap: $rem-spacing-s;
+            align-items: center;
+            padding-top: 0;
+            padding-bottom: $rem-spacing-l;
+
+            &.open {
+                .im-accordion__icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &__title {
+            flex: 1;
+        }
+
+        &__icon {
+            @include size(32px);
+
+            svg {
+                @include size(12px);
+            }
+        }
+
+        &__content {
+            > [data-wrapper-height] {
+                padding-top: 0;
+                padding-bottom: $rem-spacing-l;
+
+                ul {
+                    list-style-type: disc;
+                    padding: 10px 0 0 20px;
+
+                    li {
+                        padding: 0;
+
+                        &:not(:last-child) {
+                            padding-bottom: 10px;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        padding-bottom: 10px;
+                    }
+                }
+
+                ol {
+                    list-style-type: decimal;
+                    padding: 10px 0 0 em(40px);
+
+                    li {
+                        padding: 0;
+
+                        &:not(:last-child) {
+                            padding-bottom: 20px;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        padding-bottom: 10px;
+                    }
+                }
+
+                ul,
+                ol {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------------------//

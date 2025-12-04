@@ -1,0 +1,121 @@
+.im-hero-video {
+    &__container {
+        position: relative;
+
+        &:not(.boxed) {
+            height: 100vh;
+        }
+
+        &.container {
+            .im-hero-video__content {
+                @include eq-mobile {
+                    padding-left: $px-spacing-mobile;
+                    padding-right: $px-spacing-mobile;
+                }
+
+                @include eq-tablet {
+                    padding-left: $px-spacing-tablet;
+                    padding-right: $px-spacing-tablet;
+                }
+
+                @include at-desktop {
+                    padding-left: $px-spacing-desktop;
+                    padding-right: $px-spacing-desktop;
+                }
+            }
+        }
+
+        &.boxed {
+            @include eq-mobile {
+                height: calc(100vh - 40px);
+                margin: 20px;
+            }
+
+            @include eq-tablet {
+                height: calc(100vh - 80px);
+                margin: 40px;
+            }
+
+            @include at-desktop {
+                height: calc(100vh - 160px);
+                margin: 80px;
+            }
+        }
+    }
+
+    &__media {
+        position: relative;
+        z-index: 1;
+        @include size(100%);
+        background-color: $black;
+
+        video {
+            display: block;
+            @include size(100%);
+            object-fit: cover;
+            opacity: 0.5;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        @include size(100%);
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    &__wrapper {
+        @include size(100%);
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include flex-direction(column);
+        color: $white;
+
+        @include eq-mobile {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        @include at-tablet {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    &__label {
+    }
+
+    &__title {
+    }
+
+    &__subtitle {
+    }
+
+    &__description {
+    }
+
+    &__cta {
+        margin-top: 30px;
+        @include flexbox();
+        > *:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
+
+    &__scroll-down {
+        @include centerX();
+        bottom: 20px;
+        width: 48px;
+        height: 48px;
+        padding: 10px;
+        z-index: 3;
+        cursor: pointer;
+
+        .icon-godown {
+            width: 28px;
+            height: 28px;
+            fill: $white;
+        }
+    }
+}

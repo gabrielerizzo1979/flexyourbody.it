@@ -1,0 +1,522 @@
+@use '../base' as *;
+
+// Flex
+//--------------------------------------------------------------------//
+
+.flex {
+    display: flex;
+}
+
+@include eq-mobile {
+    .flex-m {
+        display: flex;
+    }
+}
+
+@include eq-tablet {
+    .flex-t {
+        display: flex;
+    }
+}
+
+@include at-tablet {
+    .flex-td {
+        display: flex;
+    }
+}
+
+@include at-desktop {
+    .flex-d {
+        display: flex;
+    }
+}
+
+//--------------------------------------------------------------------//
+
+// Flex wrap
+//--------------------------------------------------------------------//
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+@include eq-mobile {
+    .flex-wrap-m {
+        flex-wrap: wrap;
+    }
+}
+
+@include eq-tablet {
+    .flex-wrap-t {
+        flex-wrap: wrap;
+    }
+}
+
+@include at-tablet {
+    .flex-wrap-td {
+        flex-wrap: wrap;
+    }
+}
+
+@include at-desktop {
+    .flex-wrap-d {
+        flex-wrap: wrap;
+    }
+}
+
+//--------------------------------------------------------------------//
+
+// Flex direction
+//--------------------------------------------------------------------//
+
+.flex-row {
+    flex-direction: row;
+}
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+@include pre-desktop {
+    .flex-column-mt {
+        flex-direction: column;
+    }
+    .flex-column-reverse-mt {
+        flex-direction: column-reverse;
+    }
+}
+
+@include eq-mobile {
+    .flex-row-m {
+        flex-direction: row;
+    }
+    .flex-row-reverse-m {
+        flex-direction: row-reverse;
+    }
+    .flex-column-m {
+        flex-direction: column;
+    }
+    .flex-column-reverse-m {
+        flex-direction: column-reverse;
+    }
+}
+
+@include eq-tablet {
+    .flex-row-t {
+        flex-direction: row;
+    }
+    .flex-row-reverse-t {
+        flex-direction: row-reverse;
+    }
+    .flex-column-t {
+        flex-direction: column;
+    }
+    .flex-column-reverse-t {
+        flex-direction: column-reverse;
+    }
+}
+
+@include at-tablet {
+    .flex-row-td {
+        flex-direction: row;
+    }
+    .flex-row-reverse-td {
+        flex-direction: row-reverse;
+    }
+    .flex-column-td {
+        flex-direction: column;
+    }
+    .flex-column-reverse-td {
+        flex-direction: column-reverse;
+    }
+}
+
+@include at-desktop {
+    .flex-row-d {
+        flex-direction: row;
+    }
+    .flex-row-reverse-d {
+        flex-direction: row-reverse;
+    }
+    .flex-column-d {
+        flex-direction: column;
+    }
+    .flex-column-reverse-d {
+        flex-direction: column-reverse;
+    }
+}
+
+//--------------------------------------------------------------------//
+
+// Justify content
+//--------------------------------------------------------------------//
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+@include eq-mobile {
+    .justify-content-start-m {
+        justify-content: flex-start;
+    }
+
+    .justify-content-end-m {
+        justify-content: flex-end;
+    }
+
+    .justify-content-center-m {
+        justify-content: center;
+    }
+
+    .justify-content-between-m {
+        justify-content: space-between;
+    }
+
+    .justify-content-around-m {
+        justify-content: space-around;
+    }
+}
+
+@include eq-tablet {
+    .justify-content-start-t {
+        justify-content: flex-start;
+    }
+
+    .justify-content-end-t {
+        justify-content: flex-end;
+    }
+
+    .justify-content-center-t {
+        justify-content: center;
+    }
+
+    .justify-content-between-t {
+        justify-content: space-between;
+    }
+
+    .justify-content-around-t {
+        justify-content: space-around;
+    }
+}
+
+@include at-tablet {
+    .justify-content-start-td {
+        justify-content: flex-start;
+    }
+
+    .justify-content-end-td {
+        justify-content: flex-end;
+    }
+
+    .justify-content-center-td {
+        justify-content: center;
+    }
+
+    .justify-content-between-td {
+        justify-content: space-between;
+    }
+
+    .justify-content-around-td {
+        justify-content: space-around;
+    }
+}
+
+@include at-desktop {
+    .justify-content-start-d {
+        justify-content: flex-start;
+    }
+
+    .justify-content-end-d {
+        justify-content: flex-end;
+    }
+
+    .justify-content-center-d {
+        justify-content: center;
+    }
+
+    .justify-content-between-d {
+        justify-content: space-between;
+    }
+
+    .justify-content-around-d {
+        justify-content: space-around;
+    }
+}
+
+//--------------------------------------------------------------------//
+
+// Align items
+//--------------------------------------------------------------------//
+
+.align-items-start {
+    align-items: flex-start;
+}
+.align-items-end {
+    align-items: flex-end;
+}
+.align-items-center {
+    align-items: center;
+}
+
+@include eq-mobile {
+    .align-items-start-m {
+        align-items: flex-start;
+    }
+    .align-items-end-m {
+        align-items: flex-end;
+    }
+    .align-items-center-m {
+        align-items: center;
+    }
+}
+@include eq-tablet {
+    .align-items-start-t {
+        align-items: flex-start;
+    }
+    .align-items-end-t {
+        align-items: flex-end;
+    }
+    .align-items-center-t {
+        align-items: center;
+    }
+}
+@include at-tablet {
+    .align-items-start-td {
+        align-items: flex-start;
+    }
+    .align-items-end-td {
+        align-items: flex-end;
+    }
+    .align-items-center-td {
+        align-items: center;
+    }
+}
+@include at-desktop {
+    .align-items-start-d {
+        align-items: flex-start;
+    }
+    .align-items-end-d {
+        align-items: flex-end;
+    }
+    .align-items-center-d {
+        align-items: center;
+    }
+}
+
+//--------------------------------------------------------------------//
+
+// Align self
+//--------------------------------------------------------------------//
+
+.align-self-start {
+    align-self: flex-start;
+}
+
+.align-self-end {
+    align-self: flex-end;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+@include eq-mobile {
+    .align-self-start-m {
+        align-self: flex-start;
+    }
+    .align-self-end-m {
+        align-self: flex-end;
+    }
+    .align-self-center-m {
+        align-self: center;
+    }
+}
+@include eq-tablet {
+    .align-self-start-t {
+        align-self: flex-start;
+    }
+    .align-self-end-t {
+        align-self: flex-end;
+    }
+    .align-self-center-t {
+        align-self: center;
+    }
+}
+@include at-tablet {
+    .align-self-start-td {
+        align-self: flex-start;
+    }
+    .align-self-end-td {
+        align-self: flex-end;
+    }
+    .align-self-center-td {
+        align-self: center;
+    }
+}
+@include at-desktop {
+    .align-self-start-d {
+        align-self: flex-start;
+    }
+    .align-self-end-d {
+        align-self: flex-end;
+    }
+    .align-self-center-d {
+        align-self: center;
+    }
+}
+
+//--------------------------------------------------------------------//
+
+// Align content
+//--------------------------------------------------------------------//
+
+.align-content-start {
+    align-content: flex-start;
+}
+.align-content-end {
+    align-content: flex-end;
+}
+.align-content-center {
+    align-content: center;
+}
+
+@include eq-mobile {
+    .align-content-start-m {
+        align-content: flex-start;
+    }
+    .align-content-end-m {
+        align-content: flex-end;
+    }
+    .align-content-center-m {
+        align-content: center;
+    }
+}
+@include eq-tablet {
+    .align-content-start-t {
+        align-content: flex-start;
+    }
+    .align-content-end-t {
+        align-content: flex-end;
+    }
+    .align-content-center-t {
+        align-content: center;
+    }
+}
+@include at-tablet {
+    .align-content-start-td {
+        align-content: flex-start;
+    }
+    .align-content-end-td {
+        align-content: flex-end;
+    }
+    .align-content-center-td {
+        align-content: center;
+    }
+}
+@include at-desktop {
+    .align-content-start-d {
+        align-content: flex-start;
+    }
+    .align-content-end-d {
+        align-content: flex-end;
+    }
+    .align-content-center-d {
+        align-content: center;
+    }
+}
+
+//--------------------------------------------------------------------//
+
+// Order
+//--------------------------------------------------------------------//
+
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+.order-3 {
+    order: 3;
+}
+
+@include eq-mobile {
+    .order-m-1 {
+        order: 1;
+    }
+
+    .order-m-2 {
+        order: 2;
+    }
+
+    .order-m-3 {
+        order: 3;
+    }
+}
+
+@include eq-tablet {
+    .order-t-1 {
+        order: 1;
+    }
+
+    .order-t-2 {
+        order: 2;
+    }
+
+    .order-t-3 {
+        order: 3;
+    }
+}
+
+@include at-tablet {
+    .order-td-1 {
+        order: 1;
+    }
+
+    .order-td-2 {
+        order: 2;
+    }
+
+    .order-td-3 {
+        order: 3;
+    }
+}
+
+@include at-desktop {
+    .order-d-1 {
+        order: 1;
+    }
+
+    .order-d-2 {
+        order: 2;
+    }
+
+    .order-d-3 {
+        order: 3;
+    }
+}
+
+//--------------------------------------------------------------------//

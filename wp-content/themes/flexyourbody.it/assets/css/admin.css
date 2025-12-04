@@ -1,0 +1,46 @@
+.wp-block:not(.block-editor-rich-text__editable) {
+    max-width: 100% !important;
+    margin-bottom: 100px !important;
+    /* border: 2px solid #999 !important; */
+}
+h2,
+p,
+ul {
+    max-width: 100% !important;
+}
+.block-editor-writing-flow {
+    /* background-color: rgba(0,0,0,.02) !important; */
+}
+.block-editor-writing-flow {
+    padding: 30px;
+}
+body.user-edit-php .yoast.yoast-settings {
+    display: none;
+}
+body.user-edit-php .application-passwords {
+    display: none;
+}
+
+/* WC LISTA ORDINI */
+mark.order-status.status-refunded.tips {
+    color: black;
+    background-color: #fa6969;
+}
+
+/* RIMOZIONE FADE DAI COMPONENTI */
+.fade {
+    opacity: 1 !important;
+}
+
+*:not(.acf-block-preview):not(.wp-block) {
+    p,
+    ul,
+    ol {
+        font-family: unset;
+        font-size: 13px;
+    }
+
+    p {
+        margin: 1em 0;
+    }
+}

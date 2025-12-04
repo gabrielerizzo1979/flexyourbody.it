@@ -1,0 +1,12 @@
+{
+    "name": "acf/custom-accordion",
+    "title": "Accordion - custom-accordion",
+    "description": "Accordion - custom-accordion",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["accordion"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/custom-accordion/custom-accordion.php"
+    }
+}

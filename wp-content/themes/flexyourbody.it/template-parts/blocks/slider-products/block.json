@@ -1,0 +1,12 @@
+{
+    "name": "acf/slider-products",
+    "title": "Slider di prodotti con shortcode - slider-products",
+    "description": "Slider di prodotti con shortcode - slider-products",
+    "category": "immedia",
+    "icon": "admin-comments",
+    "keywords": ["slider", "products"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "template-parts/blocks/slider-products/slider-products.php"
+    }
+}

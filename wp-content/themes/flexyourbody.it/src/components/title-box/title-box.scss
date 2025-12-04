@@ -1,0 +1,52 @@
+.title-box {
+    &__container {
+        display: flex;
+
+        @include eq-mobile {
+            gap: $rem-spacing-l;
+        }
+
+        @include at-tablet {
+            gap: $rem-spacing-m;
+        }
+
+        &.text-left {
+            @include eq-mobile {
+                flex-direction: column;
+            }
+
+            @include at-tablet {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+        }
+
+        &.text-center {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &.text-right {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &__p {
+        max-width: rem(840);
+        margin-top: $rem-spacing-s;
+    }
+
+    &__cta {
+        &.link {
+            display: inline-flex;
+            align-items: center;
+            gap: $px-spacing-s;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

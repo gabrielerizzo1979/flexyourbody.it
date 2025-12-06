@@ -407,9 +407,14 @@ if ( class_exists('ACF') && class_exists( 'WooCommerce' ) && is_plugin_active('a
       // if ( ! $product->managing_stock() && ! $product->is_in_stock() ){
       if ( !$product->is_in_stock() ) {
         $text = __('Non disponibile','flexyourbody.it');
-        echo '<p class="stock out-of-stock">'.$text.'</p>';
+        // echo '<p class="stock out-of-stock">'.$text.'</p>';
+        echo '';
       }
   }
+
+  
+
+
 
 
   //

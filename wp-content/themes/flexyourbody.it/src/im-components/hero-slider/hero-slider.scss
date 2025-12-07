@@ -124,6 +124,14 @@ body.align-center {
 
         @include eq-mobile {
             gap: $px-spacing-s;
+            text-align: center;
+            margin-top: 20px;
+            a.btn-base{
+                display: block;
+                margin: auto;
+                width: 100%;
+                max-width: 300px;
+            }
         }
 
         @include at-tablet {

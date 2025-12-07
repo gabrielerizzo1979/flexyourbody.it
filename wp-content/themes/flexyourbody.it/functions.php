@@ -22,7 +22,7 @@ if (class_exists('ACF')) {
         define('_ALT_', ''); 
     }
     //
-    define('_VERSION_', '0.0.02');
+    define('_VERSION_', '0.0.04');
     //
     require_once 'includes/imm_navwalker.php';
     include 'includes/theme-functions.php';

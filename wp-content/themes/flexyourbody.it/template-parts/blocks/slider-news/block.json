@@ -2,11 +2,15 @@
     "name": "acf/slider-news",
     "title": "Slider news - slider-news",
     "description": "Slider news - slider-news",
-    "category": "immedia",
-    "icon": "admin-comments",
+    "category": "fyb",
+    "icon": "block-default",
     "keywords": ["slider", "news"],
     "acf": {
-        "mode": "edit",
-        "renderTemplate": "template-parts/blocks/slider-news/slider-news.php"
+        "mode": "auto",
+        "renderTemplate": "template-parts/blocks/slider-news/slider-news.php",
+        "validate": false
+    },
+    "supports": {
+        "anchor": true
     }
 }

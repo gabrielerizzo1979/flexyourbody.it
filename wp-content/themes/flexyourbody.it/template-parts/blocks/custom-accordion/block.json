@@ -2,11 +2,15 @@
     "name": "acf/custom-accordion",
     "title": "Accordion - custom-accordion",
     "description": "Accordion - custom-accordion",
-    "category": "immedia",
-    "icon": "admin-comments",
+    "category": "fyb",
+    "icon": "block-default",
     "keywords": ["accordion"],
     "acf": {
-        "mode": "edit",
-        "renderTemplate": "template-parts/blocks/custom-accordion/custom-accordion.php"
+        "mode": "auto",
+        "renderTemplate": "template-parts/blocks/custom-accordion/custom-accordion.php",
+        "validate": false
+    },
+    "supports": {
+        "anchor": true
     }
 }

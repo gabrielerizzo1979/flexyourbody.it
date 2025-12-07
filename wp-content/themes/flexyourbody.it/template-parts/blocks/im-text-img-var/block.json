@@ -2,11 +2,15 @@
     "name": "acf/im-text-img-var",
     "title": "Testo e immagine - im-text-img-var",
     "description": "Testo e immagine - im-text-img-var",
-    "category": "immedia",
-    "icon": "admin-comments",
+    "category": "fyb",
+    "icon": "block-default",
     "keywords": ["testo", "immagine"],
     "acf": {
-        "mode": "edit",
-        "renderTemplate": "template-parts/blocks/im-text-img-var/im-text-img-var.php"
+        "mode": "auto",
+        "renderTemplate": "template-parts/blocks/im-text-img-var/im-text-img-var.php",
+        "validate": false
+    },
+    "supports": {
+        "anchor": true
     }
 }

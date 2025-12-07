@@ -2,11 +2,15 @@
     "name": "acf/cards-text-on-bg",
     "title": "Cards con testo su sfondo - cards-text-on-bg",
     "description": "Cards con testo su sfondo - cards-text-on-bg",
-    "category": "immedia",
-    "icon": "admin-comments",
+    "category": "fyb",
+    "icon": "block-default",
     "keywords": ["card", "text", "background"],
     "acf": {
-        "mode": "edit",
-        "renderTemplate": "template-parts/blocks/cards-text-on-bg/cards-text-on-bg.php"
+        "mode": "auto",
+        "renderTemplate": "template-parts/blocks/cards-text-on-bg/cards-text-on-bg.php",
+        "validate": false
+    },
+    "supports": {
+        "anchor": true
     }
 }

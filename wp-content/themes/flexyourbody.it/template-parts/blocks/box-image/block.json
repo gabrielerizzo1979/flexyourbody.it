@@ -2,11 +2,15 @@
     "name": "acf/box-image",
     "title": "Immagine - box-image",
     "description": "Immagine - box-image",
-    "category": "immedia",
-    "icon": "admin-comments",
+    "category": "fyb",
+    "icon": "block-default",
     "keywords": ["box", "image"],
     "acf": {
-        "mode": "edit",
-        "renderTemplate": "template-parts/blocks/box-image/box-image.php"
+        "mode": "auto",
+        "renderTemplate": "template-parts/blocks/box-image/box-image.php",
+        "validate": false
+    },
+    "supports": {
+        "anchor": true
     }
 }

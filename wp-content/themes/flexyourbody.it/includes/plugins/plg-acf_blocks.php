@@ -1,14 +1,17 @@
 <?php
+
 function filter_block_categories_when_post_provided( $block_categories, $editor_context ) {
     if ( ! empty( $editor_context->post ) ) {
-        array_push(
-            $block_categories,
-            array(
-                'slug'  => 'immedia',
-                'title' => __( 'IM*MEDIA BLOCKS', 'acf' ),
-                'icon'  => null,
-            )
+        $fyb_category = array(
+            'slug'  => 'fyb',
+            'title' => __( 'FYB BLOCKS', 'acf' ),
+            'icon'  => null,
         );
+        // Filtra le categorie esistenti per rimuovere 'immedia' se già presente
+        $block_categories = array_filter($block_categories, function($cat) {
+            return $cat['slug'] !== 'fyb';
+        });
+        array_unshift( $block_categories, $fyb_category );
     }
     return $block_categories;
 }

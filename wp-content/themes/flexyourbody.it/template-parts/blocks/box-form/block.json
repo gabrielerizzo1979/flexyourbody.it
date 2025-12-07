@@ -2,11 +2,15 @@
     "name": "acf/box-form",
     "title": "Contact form - box-form",
     "description": "Contact form - box-form",
-    "category": "immedia",
-    "icon": "admin-comments",
+    "category": "fyb",
+    "icon": "block-default",
     "keywords": ["contact", "form"],
     "acf": {
-        "mode": "edit",
-        "renderTemplate": "template-parts/blocks/box-form/box-form.php"
+        "mode": "auto",
+        "renderTemplate": "template-parts/blocks/box-form/box-form.php",
+        "validate": false
+    },
+    "supports": {
+        "anchor": true
     }
 }

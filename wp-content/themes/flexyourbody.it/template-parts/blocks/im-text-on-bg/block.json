@@ -2,11 +2,15 @@
     "name": "acf/im-text-on-bg",
     "title": "Testo a due colonne con sfondo - im-text-on-bg",
     "description": "Testo a due colonne con sfondo - im-text-on-bg",
-    "category": "immedia",
-    "icon": "admin-comments",
+    "category": "fyb",
+    "icon": "block-default",
     "keywords": ["testo", "colonne", "immagine"],
     "acf": {
-        "mode": "edit",
-        "renderTemplate": "template-parts/blocks/im-text-on-bg/im-text-on-bg.php"
+        "mode": "auto",
+        "renderTemplate": "template-parts/blocks/im-text-on-bg/im-text-on-bg.php",
+        "validate": false
+    },
+    "supports": {
+        "anchor": true
     }
 }

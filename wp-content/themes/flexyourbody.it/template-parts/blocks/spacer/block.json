@@ -2,11 +2,15 @@
     "name": "acf/spacer",
     "title": "Spacer",
     "description": "Spacer",
-    "category": "immedia",
-    "icon": "admin-comments",
+    "category": "fyb",
+    "icon": "block-default",
     "keywords": ["spacer", "spazio"],
     "acf": {
-        "mode": "edit",
-        "renderTemplate": "template-parts/blocks/spacer/spacer.php"
+        "mode": "auto",
+        "renderTemplate": "template-parts/blocks/spacer/spacer.php",
+        "validate": false
+    },
+    "supports": {
+        "anchor": true
     }
 }

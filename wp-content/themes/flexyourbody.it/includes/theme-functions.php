@@ -458,7 +458,7 @@ add_filter( 'wp_mail_from', function ( $original_email_address ) {
 	if( !empty(get_field('wp_mail_from','options')) ) {
 		$wp_mail_from = get_field('wp_mail_from','options');
 	}else{
-		$wp_mail_from = 'noreply@immedia.net';
+		$wp_mail_from = 'noreply@flexyourbody.it';
 	}
     return $wp_mail_from;
 } );
@@ -468,7 +468,7 @@ add_filter( 'wp_mail_from_name', function ( $original_email_from ) {
 	if( !empty(get_field('wp_mail_from_name','options')) ) {
 		$wp_mail_from_name = get_field('wp_mail_from_name','options');
 	}else{
-		$wp_mail_from_name = 'IM*MEDIA';
+		$wp_mail_from_name = 'Flex Your Body';
 	}
     return $wp_mail_from_name;
 } );

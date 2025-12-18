@@ -472,3 +472,15 @@ add_filter( 'wp_mail_from_name', function ( $original_email_from ) {
 	}
     return $wp_mail_from_name;
 } );
+
+
+
+function theme_custom_scripts_version( $src, $handle ) {
+    // Se la costante _VERSION_ non è definita, non fare nulla
+    if ( ! defined( '_VERSION_' ) ) {
+        return $src;
+    }
+    return add_query_arg( 'ver', _VERSION_, $src );
+}
+add_filter( 'script_loader_src', 'theme_custom_scripts_version', 9999, 2 );
+add_filter( 'style_loader_src', 'theme_custom_scripts_version', 9999, 2 );

@@ -90,7 +90,7 @@
                 flex-wrap: wrap;
 
                 .wc-block-components-button:not(.is-link) {
-                    &.outlined {
+                    &.outlined, &.is-style-outline { 
                         @extend %wc-btn-black-outline;
                         @extend %wc-btn-small;
 
@@ -99,7 +99,7 @@
                         }
                     }
 
-                    &.contained {
+                    &.contained, &:not(.is-style-outline) {
                         @extend %wc-btn-black;
                         @extend %wc-btn-small;
                     }

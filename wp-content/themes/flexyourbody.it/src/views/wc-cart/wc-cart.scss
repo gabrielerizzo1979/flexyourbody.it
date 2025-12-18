@@ -137,6 +137,8 @@
                     .wp-block-woocommerce-cart-order-summary-block {
                         margin-bottom: $rem-spacing-l;
                         border-bottom: 0;
+                        font-size: rem(16);
+                        line-height: 1.5;
                     }
 
                     .wp-block-woocommerce-cart-order-summary-coupon-form-block {

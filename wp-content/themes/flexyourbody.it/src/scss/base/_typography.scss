@@ -183,6 +183,7 @@ $base-font-size: 16px;
     appearance: none;
     text-align: center;
     border: 1px solid;
+    box-shadow: unset;
     transition: color 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53),
         background-color 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53),
         border-color 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -1030,6 +1031,7 @@ $base-font-size: 16px;
         .wc-block-cart-item__prices {
             margin-top: $rem-spacing-s;
             margin-bottom: $rem-spacing-s;
+            font-size: rem(16);
         }
 
         .wc-block-components-sale-badge {
@@ -1075,6 +1077,7 @@ $base-font-size: 16px;
 
                 .wc-block-components-quantity-selector__input {
                     z-index: 1;
+                    font-size: rem(16);
                 }
 
                 .wc-block-components-quantity-selector__button--plus {
